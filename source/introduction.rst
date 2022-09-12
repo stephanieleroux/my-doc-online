@@ -1,10 +1,9 @@
 Introduction 
 #################################
 
+This is a (dummy) example to show  how to automatically build a documentation using Readthedocs.
+
 This is the intro page.
-
-This is also an example how to automatically build of a documentation, using Readthedocs.
-
 
 RST format
 ***********

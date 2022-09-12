@@ -190,9 +190,9 @@ Indices and tables
 ```
 
 ### 1.5 Write your documentation!
-It must be written in [rst format], which is close to markdown format. You can also write in markdown if you have unable this option (see above).
+It must be written in [rst format](), which is close to markdown format. You can also write in markdown if you have unable this option (see above, and also the "formatting tips" section below).
 
-Each documentation page (file) you write should be referenced to in the index.rst file to be included in the on-line rendered documentation.
+Each documentation page  you write (each file, in either .rst or .md format) should be referenced to in the index.rst file to be included in the on-line rendered documentation.
 
 Finally, push your up-to-date Project on github.
 
