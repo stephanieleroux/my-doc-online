@@ -10,7 +10,7 @@ Welcome to my code's documentation!
    :caption: Contents:
 
    introduction
-   getting_started
+   access-the-code
    build_documentation
    formatting-tips
 

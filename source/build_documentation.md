@@ -1,6 +1,8 @@
 # Build the documentation
 
-This  page explains the steps in order to write and publish the documentation of  a code with Reathedocs. This tutorial is in the case where you don't wish to share the code itself nor its internal documentation (like the code docstrings) but you only want to publish an external documentation about it.
+This  page explains how to write and publish the documentation of  a code with Reathedocs. 
+
+This tutorial is for the case  you don't wish to share the code itself nor its internal documentation (like the code docstrings) but you only want to publish an external documentation about it.
 
 In case you want to share a documentation _and_ the code itself, and if your code is in Python, documented with nice docstrings, you can have a look at [this other tutorial]() instead.
 
@@ -21,7 +23,7 @@ my-doc-online/
     ├── build_documentation.md
     ├── conf.py
     ├── formatting-tips.md
-    ├── getting_started.rst
+    ├── access-the-code.rst
     ├── img
     │   └── screenshot-build-doc2.png
     ├── index.rst
@@ -77,7 +79,7 @@ myst_parser>=0.15.2
 ```
 
 ### 1.3 Set up your `conf.py` file
-This configuration will set options for Readthedocs to generate the documentation on-line.
+This configuration file will set options for Readthedocs to generate the documentation on-line.
 
 In our case we have: 
 ```
