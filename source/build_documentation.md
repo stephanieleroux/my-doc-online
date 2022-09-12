@@ -204,7 +204,7 @@ The first thing you then need to do is to create an account on [ReadTheDocs.org]
 
 There is an [extensive documentation](https://docs.readthedocs.io/en/stable/tutorial/) about what/how you can do with readthedocs. Here we will go through the _basic steps_ to publish an online documentation. Please refer to the above link for more advanced needs.
 
-### 2.2 Connext to your github account
+### 2.2 Connect to your github account
 * From your account on Reathedocs, click on __"Connect your Accounts"__,
 * Then connect your github account.
 
@@ -220,13 +220,14 @@ There is an [extensive documentation](https://docs.readthedocs.io/en/stable/tuto
 ---
 ## 3. Build your documentation  on-line with readthedocs
 
-Check on the readthedocs `build` page. In our example: [https://readthedocs.org/projects/my-doc-online/builds/](https://readthedocs.org/projects/my-doc-online/builds/).
+To do so, check on the readthedocs `build` page. In our example: [https://readthedocs.org/projects/my-doc-online/builds/](https://readthedocs.org/projects/my-doc-online/builds/).
 If you had connected your github Project to your reathedocs account as explained in this tuto, a "webhook" was generated automatically so that any new `push` or 'pull request` on your github project will send a notification to your readthedocs account and will trigger a new build  of your documentation. If for some reason the webhook was not generated, you can set it up manually following these [instructions](https://docs.readthedocs.io/en/stable/connected-accounts.html).
 
 Your screen should look like this:
 
 ![screenshot](./img/screenshot-build-doc2)
 
-You can click on the latest build to see the details and try to debug if it failed.
+You can click on the latest build to see the details (and try to debug if it failed).
+If it was successful, congrats! You can now access your rendered documentation by clicking on the `view docs` button.
 
 
