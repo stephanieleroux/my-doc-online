@@ -10,9 +10,9 @@
 # add these directories to sys.path here. If the directory is relative to the
 # documentation root, use os.path.abspath to make it absolute, like shown here.
 #
-#import os
-#import sys
-#sys.path.append(os.path.abspath('../../dummypackage/'))
+import os
+import sys
+sys.path.append(os.path.abspath('../'))
 
 # this is to tell reathedocs not to try to document numpy which is external.
 #autodoc_mock_imports = ['numpy']

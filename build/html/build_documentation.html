@@ -1,0 +1,351 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Build the documentation &mdash; my-documentation-online 0.0 documentation</title>
+      <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+      <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
+  <!--[if lt IE 9]>
+    <script src="_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+        <script data-url_root="./" id="documentation_options" src="_static/documentation_options.js"></script>
+        <script src="_static/jquery.js"></script>
+        <script src="_static/underscore.js"></script>
+        <script src="_static/doctools.js"></script>
+    <script src="_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="Formatting tips" href="formatting-tips.html" />
+    <link rel="prev" title="Get access to my code" href="access-the-code.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+            <a href="index.html" class="icon icon-home"> my-documentation-online
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <p class="caption" role="heading"><span class="caption-text">Contents:</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="introduction.html">Introduction</a></li>
+<li class="toctree-l1"><a class="reference internal" href="access-the-code.html">Get access to my code</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">Build the documentation</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#get-ready-on-github">0. Get ready on github</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#set-up-your-documentation">1. Set up your documentation</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#add-a-readthedoc-yaml-config-file">1.1 Add a .readthedoc.yaml config file</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#add-a-requirements-txt-file">1.2 Add a requirements.txt file</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#set-up-your-conf-py-file">1.3 Set up your <code class="docutils literal notranslate"><span class="pre">conf.py</span></code> file</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#set-up-the-index-rst-file">1.4 Set up the index.rst file</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#write-your-documentation">1.5 Write your documentation!</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#getting-started-on-reathedocs-org">2. Getting started on Reathedocs.org</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#create-your-account">2.1 Create your account:</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#connect-to-your-github-account">2.2 Connect to your github account</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#import-a-project">2.3 Import a Project</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#build-your-documentation-on-line-with-readthedocs">3. Build your documentation  on-line with readthedocs</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="formatting-tips.html">Formatting tips</a></li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="index.html">my-documentation-online</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="index.html" class="icon icon-home"></a> &raquo;</li>
+      <li>Build the documentation</li>
+      <li class="wy-breadcrumbs-aside">
+            <a href="_sources/build_documentation.md.txt" rel="nofollow"> View page source</a>
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <div class="tex2jax_ignore mathjax_ignore section" id="build-the-documentation">
+<h1>Build the documentation<a class="headerlink" href="#build-the-documentation" title="Permalink to this headline"></a></h1>
+<p>This  page explains how to write and publish the documentation of  a code with Reathedocs.</p>
+<p>This tutorial is for the case  you don’t wish to share the code itself nor its internal documentation (like the code docstrings) but you only want to publish an external documentation about it.</p>
+<p>In case you want to share a documentation <em>and</em> the code itself, and if your code is in Python, documented with nice docstrings, you can have a look at <a class="reference external" href="https://my-documented-code-test.readthedocs.io/en/latest/">this other tutorial</a> instead.</p>
+<hr class="docutils" />
+<div class="section" id="get-ready-on-github">
+<h2>0. Get ready on github<a class="headerlink" href="#get-ready-on-github" title="Permalink to this headline"></a></h2>
+<p>As a pre-requisite, you need:</p>
+<ul class="simple">
+<li><p>to have a github account,</p></li>
+<li><p>to have created a new github Project, say for example <code class="docutils literal notranslate"><span class="pre">my-doc-online</span></code> (<a class="reference external" href="https://github.com/stephanieleroux/my-doc-online">see here on gihub</a>),</p></li>
+<li><p>this Project contains a source folder where you will put the text files containing the documentation.</p></li>
+</ul>
+<p>As an example, here is the structure of the <code class="docutils literal notranslate"><span class="pre">my-doc-online</span></code> github project:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>my-doc-online/
+├── LICENSE
+├── README.md
+├── requirements.txt
+└── source
+    ├── build_documentation.md
+    ├── conf.py
+    ├── formatting-tips.md
+    ├── access-the-code.rst
+    ├── img
+    │   └── screenshot-build-doc2.png
+    ├── index.rst
+    └── introduction.rst
+</pre></div>
+</div>
+</div>
+<hr class="docutils" />
+<div class="section" id="set-up-your-documentation">
+<h2>1. Set up your documentation<a class="headerlink" href="#set-up-your-documentation" title="Permalink to this headline"></a></h2>
+<div class="section" id="add-a-readthedoc-yaml-config-file">
+<h3>1.1 Add a .readthedoc.yaml config file<a class="headerlink" href="#add-a-readthedoc-yaml-config-file" title="Permalink to this headline"></a></h3>
+<p>You need to have a <code class="docutils literal notranslate"><span class="pre">.readthedocs.yaml</span></code> config file at the root of your Project (in our dummy example, it will be located in the <code class="docutils literal notranslate"><span class="pre">/my-doc-online/</span></code> directory).</p>
+<p>Here is the simple config file used in the example:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="c1"># .readthedocs.yaml</span>
+<span class="c1"># Read the Docs configuration file</span>
+<span class="c1"># See https://docs.readthedocs.io/en/stable/config-file/v2.html for details</span>
+
+<span class="c1"># Required</span>
+<span class="n">version</span><span class="p">:</span> <span class="mi">2</span>
+
+<span class="c1"># Set the version of Python and other tools you might need</span>
+<span class="n">build</span><span class="p">:</span>
+  <span class="n">os</span><span class="p">:</span> <span class="n">ubuntu</span><span class="o">-</span><span class="mf">20.04</span>
+  <span class="n">tools</span><span class="p">:</span>
+    <span class="n">python</span><span class="p">:</span> <span class="s2">&quot;3.9&quot;</span>
+    
+
+<span class="c1"># Build documentation in the root directory with Sphinx</span>
+<span class="n">sphinx</span><span class="p">:</span>
+   <span class="n">configuration</span><span class="p">:</span> <span class="n">source</span><span class="o">/</span><span class="n">conf</span><span class="o">.</span><span class="n">py</span>
+   <span class="n">builder</span><span class="p">:</span> <span class="n">html</span>
+   <span class="n">fail_on_warning</span><span class="p">:</span> <span class="n">true</span>
+
+
+<span class="c1"># Optionally declare the Python requirements required to build your docs</span>
+<span class="n">python</span><span class="p">:</span>
+   <span class="n">install</span><span class="p">:</span>
+   <span class="o">-</span> <span class="n">requirements</span><span class="p">:</span> <span class="n">requirements</span><span class="o">.</span><span class="n">txt</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="add-a-requirements-txt-file">
+<h3>1.2 Add a requirements.txt file<a class="headerlink" href="#add-a-requirements-txt-file" title="Permalink to this headline"></a></h3>
+<p>Add a <code class="docutils literal notranslate"><span class="pre">requirements.txt</span></code> file at the root of your Project. This file indicates the requirements (packages) needed to use build you documentation.</p>
+<p>In our example we have:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>$$&gt;&gt; vi requirements.txt 
+sphinx&gt;=4.4.0
+myst_parser&gt;=0.15.2
+</pre></div>
+</div>
+</div>
+<div class="section" id="set-up-your-conf-py-file">
+<h3>1.3 Set up your <code class="docutils literal notranslate"><span class="pre">conf.py</span></code> file<a class="headerlink" href="#set-up-your-conf-py-file" title="Permalink to this headline"></a></h3>
+<p>This configuration file will set options for Readthedocs to generate the documentation on-line.</p>
+<p>In our case we have:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">vi</span> <span class="n">source</span><span class="o">/</span><span class="n">conf</span><span class="o">.</span><span class="n">py</span> 
+<span class="c1"># Configuration file for the Sphinx documentation builder.</span>
+<span class="c1">#</span>
+<span class="c1"># This file only contains a selection of the most common options. For a full</span>
+<span class="c1"># list see the documentation:</span>
+<span class="c1"># https://www.sphinx-doc.org/en/master/usage/configuration.html</span>
+
+<span class="c1"># -- Path setup --------------------------------------------------------------</span>
+
+<span class="c1"># If extensions (or modules to document with autodoc) are in another directory,</span>
+<span class="c1"># add these directories to sys.path here. If the directory is relative to the</span>
+<span class="c1"># documentation root, use os.path.abspath to make it absolute, like shown here.</span>
+<span class="c1">#</span>
+<span class="c1">#import os</span>
+<span class="c1">#import sys</span>
+<span class="c1">#sys.path.append(os.path.abspath(&#39;../../dummypackage/&#39;))</span>
+
+
+<span class="c1"># -- Project information -----------------------------------------------------</span>
+
+<span class="n">project</span> <span class="o">=</span> <span class="s1">&#39;my-documented-code-test&#39;</span>
+<span class="n">copyright</span> <span class="o">=</span> <span class="s1">&#39;2022, stephanie&#39;</span>
+<span class="n">author</span> <span class="o">=</span> <span class="s1">&#39;stephanie&#39;</span>
+
+<span class="c1"># The full version, including alpha/beta/rc tags</span>
+<span class="n">release</span> <span class="o">=</span> <span class="s1">&#39;0.0&#39;</span>
+
+<span class="n">master_doc</span> <span class="o">=</span> <span class="s1">&#39;index&#39;</span>
+
+<span class="c1"># -- General configuration ---------------------------------------------------</span>
+
+<span class="c1"># Add any Sphinx extension module names here, as strings. They can be</span>
+<span class="c1"># extensions coming with Sphinx (named &#39;sphinx.ext.*&#39;) or your custom</span>
+<span class="c1"># ones.</span>
+<span class="c1">#extensions = [</span>
+<span class="c1">#    &#39;sphinx.ext.autodoc&#39;</span>
+<span class="c1">#]</span>
+<span class="n">extensions</span> <span class="o">=</span> <span class="p">[</span>
+    <span class="s1">&#39;myst_parser&#39;</span>
+<span class="p">]</span>
+
+<span class="n">source_suffix</span> <span class="o">=</span> <span class="p">{</span>
+    <span class="s1">&#39;.rst&#39;</span><span class="p">:</span> <span class="s1">&#39;restructuredtext&#39;</span><span class="p">,</span>
+    <span class="s1">&#39;.txt&#39;</span><span class="p">:</span> <span class="s1">&#39;markdown&#39;</span><span class="p">,</span>
+    <span class="s1">&#39;.md&#39;</span><span class="p">:</span> <span class="s1">&#39;markdown&#39;</span><span class="p">,</span>
+<span class="p">}</span>
+
+<span class="n">myst_enable_extensions</span> <span class="o">=</span> <span class="p">[</span><span class="s2">&quot;dollarmath&quot;</span><span class="p">,</span> <span class="s2">&quot;amsmath&quot;</span><span class="p">]</span>
+
+<span class="c1"># Add any paths that contain templates here, relative to this directory.</span>
+<span class="n">templates_path</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;_templates&#39;</span><span class="p">]</span>
+
+<span class="c1"># List of patterns, relative to source directory, that match files and</span>
+<span class="c1"># directories to ignore when looking for source files.</span>
+<span class="c1"># This pattern also affects html_static_path and html_extra_path.</span>
+<span class="n">exclude_patterns</span> <span class="o">=</span> <span class="p">[]</span>
+
+
+<span class="c1"># -- Options for HTML output -------------------------------------------------</span>
+
+<span class="c1"># The theme to use for HTML and HTML Help pages.  See the documentation for</span>
+<span class="c1"># a list of builtin themes.</span>
+<span class="c1">#</span>
+<span class="c1">#html_theme = &#39;classic&#39;</span>
+<span class="n">html_theme</span> <span class="o">=</span> <span class="s1">&#39;sphinx_rtd_theme&#39;</span>
+
+<span class="c1"># Add any paths that contain custom static files (such as style sheets) here,</span>
+<span class="c1"># relative to this directory. They are copied after the builtin static files,</span>
+<span class="c1"># so a file named &quot;default.css&quot; will overwrite the builtin &quot;default.css&quot;.</span>
+<span class="c1">#html_static_path = [&#39;_static&#39;]</span>
+
+<span class="n">exclude_patterns</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;_build&#39;</span><span class="p">,</span> <span class="s1">&#39;Thumbs.db&#39;</span><span class="p">,</span> <span class="s1">&#39;.DS_Store&#39;</span><span class="p">]</span>
+</pre></div>
+</div>
+<ul class="simple">
+<li><p>The extension ‘myst_parser’ and the <code class="docutils literal notranslate"><span class="pre">source_suffix</span></code> list is not necessary but it can be used to unable markdown format and latex equations within the documentation. <code class="docutils literal notranslate"><span class="pre">myst_enable_extensions</span> <span class="pre">=</span> <span class="pre">[&quot;dollarmath&quot;,</span> <span class="pre">&quot;amsmath&quot;]</span></code> is also needed in that case.</p></li>
+</ul>
+</div>
+<div class="section" id="set-up-the-index-rst-file">
+<h3>1.4 Set up the index.rst file<a class="headerlink" href="#set-up-the-index-rst-file" title="Permalink to this headline"></a></h3>
+<p>This file is the index of your documentation. You can set which other text files will be included. You can add as many files as you want, in rst format (or in markdown if you have unable this option - see above).
+The  pages to include in the documentation are listed in the <code class="docutils literal notranslate"><span class="pre">toctree::</span></code> section.
+In our example, the index file looks like:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>.. my dummy documentation master file
+   You can adapt this file completely to your liking, but it should at least
+   contain the root `toctree` directive.
+
+Welcome to my code&#39;s documentation!
+==============================================
+
+.. toctree::
+   :maxdepth: 2
+   :caption: Contents:
+
+   introduction
+   getting_started
+   build_documentation
+   formatting-tips
+
+Indices and tables
+==================
+
+* :ref:`genindex`
+* :ref:`modindex`
+* :ref:`search`
+</pre></div>
+</div>
+</div>
+<div class="section" id="write-your-documentation">
+<h3>1.5 Write your documentation!<a class="headerlink" href="#write-your-documentation" title="Permalink to this headline"></a></h3>
+<p>It must be written in [rst format](https://thomas-cokelaer.info/tutorials/sphinx/rest_syntax.html](https://thomas-cokelaer.info/tutorials/sphinx/rest_syntax.html), which is close to markdown format. You can also write in markdown if you have unable this option (see above, and also the “formatting tips” section below).</p>
+<p>Each documentation page  you write (each file, in either .rst or .md format) should be referenced to in the index.rst file to be included in the on-line rendered documentation.</p>
+<p>Finally, push your up-to-date Project on github.</p>
+</div>
+</div>
+<hr class="docutils" />
+<div class="section" id="getting-started-on-reathedocs-org">
+<h2>2. Getting started on Reathedocs.org<a class="headerlink" href="#getting-started-on-reathedocs-org" title="Permalink to this headline"></a></h2>
+<div class="section" id="create-your-account">
+<h3>2.1 Create your account:<a class="headerlink" href="#create-your-account" title="Permalink to this headline"></a></h3>
+<p>The first thing you then need to do is to create an account on <a class="reference external" href="https://readthedocs.org/accounts/signup/">ReadTheDocs.org</a>.</p>
+<p>There is an <a class="reference external" href="https://docs.readthedocs.io/en/stable/tutorial/">extensive documentation</a> about what/how you can do with readthedocs. Here we will go through the <em>basic steps</em> to publish an online documentation. Please refer to the above link for more advanced needs.</p>
+</div>
+<div class="section" id="connect-to-your-github-account">
+<h3>2.2 Connect to your github account<a class="headerlink" href="#connect-to-your-github-account" title="Permalink to this headline"></a></h3>
+<ul class="simple">
+<li><p>From your account on Reathedocs, click on <strong>“Connect your Accounts”</strong>,</p></li>
+<li><p>Then connect your github account.</p></li>
+</ul>
+</div>
+<div class="section" id="import-a-project">
+<h3>2.3 Import a Project<a class="headerlink" href="#import-a-project" title="Permalink to this headline"></a></h3>
+<ul class="simple">
+<li><p>Click on your login on the top right of the readthedocs page, then <strong>“My Projects”</strong>,</p></li>
+<li><p>Click on <strong>“Import a Project”</strong>,</p></li>
+<li><p>Click on <strong>“Import Manually”</strong> and fill in the requested fields.</p></li>
+</ul>
+</div>
+</div>
+<hr class="docutils" />
+<div class="section" id="build-your-documentation-on-line-with-readthedocs">
+<h2>3. Build your documentation  on-line with readthedocs<a class="headerlink" href="#build-your-documentation-on-line-with-readthedocs" title="Permalink to this headline"></a></h2>
+<p>To do so, check on the readthedocs <code class="docutils literal notranslate"><span class="pre">build</span></code> page. In our example: <a class="reference external" href="https://readthedocs.org/projects/my-doc-online/builds/">https://readthedocs.org/projects/my-doc-online/builds/</a>.
+If you had connected your github Project to your reathedocs account as explained in this tuto, a “webhook” was generated automatically so that any new <code class="docutils literal notranslate"><span class="pre">push</span></code> or ‘pull request` on your github project will send a notification to your readthedocs account and will trigger a new build  of your documentation. If for some reason the webhook was not generated, you can set it up manually following these <a class="reference external" href="https://docs.readthedocs.io/en/stable/connected-accounts.html">instructions</a>.</p>
+<p>Your screen should look like this:</p>
+<p><img alt="screenshot2" src="_images/screenshot-build-doc2.png" /></p>
+<p>You can click on the latest build to see the details (and try to debug if it failed).
+If it was successful, congrats! You can now access your rendered documentation by clicking on the <code class="docutils literal notranslate"><span class="pre">view</span> <span class="pre">docs</span></code> button.</p>
+</div>
+</div>
+
+
+           </div>
+          </div>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
+        <a href="access-the-code.html" class="btn btn-neutral float-left" title="Get access to my code" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="formatting-tips.html" class="btn btn-neutral float-right" title="Formatting tips" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright 2022, stephanie.</p>
+  </div>
+
+  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>
