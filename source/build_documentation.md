@@ -225,7 +225,7 @@ If you had connected your github Project to your reathedocs account as explained
 
 Your screen should look like this:
 
-![screenshot](./img/screenshot-build-doc2)
+![screenshot](./img/screenshot-build-doc2.png)
 
 You can click on the latest build to see the details (and try to debug if it failed).
 If it was successful, congrats! You can now access your rendered documentation by clicking on the `view docs` button.
