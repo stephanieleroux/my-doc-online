@@ -6,6 +6,8 @@ This tutorial is for the case  you don't wish to share the code itself nor its i
 
 In case you want to share a documentation _and_ the code itself, and if your code is in Python, documented with nice docstrings, you can have a look at [this other tutorial](https://my-documented-code-test.readthedocs.io/en/latest/) instead.
 
+You'll notice that this tutorial  is itself built using Readthedocs. 
+
 ---
 ## 0. Get ready on github 
 As a pre-requisite, you need:
@@ -157,7 +159,7 @@ html_theme = 'sphinx_rtd_theme'
 exclude_patterns = ['_build', 'Thumbs.db', '.DS_Store']
 ```
 
-* The extension 'myst_parser' and the `source_suffix` list is not necessary but it can be used to unable markdown format and latex equations within the documentation. `myst_enable_extensions = ["dollarmath", "amsmath"]` is also needed in that case.
+* The extension 'myst_parser' and the `source_suffix` list is not necessary but it can be used to switch on markdown format and latex equations within the documentation. `myst_enable_extensions = ["dollarmath", "amsmath"]` is also needed in that case.
 
 
 ### 1.4 Set up the index.rst file
@@ -190,7 +192,7 @@ Indices and tables
 ```
 
 ### 1.5 Write your documentation!
-It must be written in [rst format](https://thomas-cokelaer.info/tutorials/sphinx/rest_syntax.html](https://thomas-cokelaer.info/tutorials/sphinx/rest_syntax.html), which is close to markdown format. You can also write in markdown if you have unable this option (see above, and also the "formatting tips" section below).
+It must be written in [rst format](https://thomas-cokelaer.info/tutorials/sphinx/rest_syntax.html), which is close to markdown format. You can also write in markdown if you have unable this option (see above, and also the "formatting tips" section below).
 
 Each documentation page  you write (each file, in either .rst or .md format) should be referenced to in the index.rst file to be included in the on-line rendered documentation.
 
